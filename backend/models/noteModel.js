@@ -2,23 +2,32 @@ import mongoose from "mongoose";
 
 const noteSchema = mongoose.Schema(
   {
-    title: {
-      type: String,
-      required: true,
-    },
-    content: {
-      type: String,
-      required: true,
-    },
-    category: {
-      type: String,
-      required: true,
-    },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: "User",
-    },
+    h_name:{
+      type:String,
+      required:true,
+  },
+  h_location:{
+      type:String,
+      required:true, 
+  },
+  vacancies:{
+      type:Number,
+      required:true,
+  },
+  contact:{
+      type:String,
+      required:true,
+  },
+  h_images:{
+      type:String,
+      required:false,
+      default:null,
+  },
+  rent:{
+      type:Number,
+      required:true,
+      default:1000,
+  },
   },
   {
     timestamps: true,
